@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover practical, renter-friendly kitchen organization ideas and smart storage solutions for small homes and apartments.">
+  <meta name="theme-color" content="#f7f5ef">
+  <title>GalleyEase | Smart Storage. Simpler Kitchens.</title>
+  <style>
+    :root {
+      --green: #294c3c;
+      --green-light: #e9eee8;
+      --cream: #f7f5ef;
+      --white: #ffffff;
+      --ink: #26332c;
+      --muted: #68736c;
+      --gold: #bd9560;
+      --line: #e8e6df;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, 90%); margin: auto; }
+    header {
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .logo {
+      color: var(--green);
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+    .logo span { color: var(--gold); }
+    nav { display: flex; gap: 27px; align-items: center; }
+    nav a { font-size: 14px; font-weight: 600; }
+    nav a:hover { color: var(--gold); }
+    .hero {
+      padding: 82px 0;
+      background: linear-gradient(120deg, #edf0e8, #f7f5ef 65%);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    h1 {
+      color: var(--green);
+      font-size: clamp(39px, 5vw, 60px);
+      line-height: 1.12;
+      letter-spacing: -2px;
+      margin-bottom: 22px;
+    }
+    .hero p { color: var(--muted); font-size: 17px; max-width: 520px; }
+    .button {
+      display: inline-block;
+      background: var(--green);
+      color: white;
+      padding: 13px 24px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-top: 28px;
+    }
+    .button:hover { background: #19392b; }
+    .hero-image {
+      min-height: 360px;
+      border-radius: 12px;
+      background:
+        linear-gradient(0deg, rgba(20,40,28,.12), rgba(20,40,28,.02)),
+        url("https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1100&q=85") center/cover;
+      box-shadow: 0 15px 40px rgba(35,55,40,.12);
+    }
+    section { padding: 75px 0; }
+    .section-heading { text-align: center; margin-bottom: 38px; }
+    .section-heading h2 {
+      color: var(--green);
+      font-size: 32px;
+      letter-spacing: -.8px;
+      margin-bottom: 9px;
+    }
+    .section-heading p { color: var(--muted); font-size: 15px; }
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .category {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      overflow: hidden;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .category:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(35,55,40,.09);
+    }
+    .category img {
+      width: 100%;
+      height: 205px;
+      object-fit: cover;
+      display: block;
+    }
+    .category-content { padding: 21px; }
+    .category h3 { color: var(--green); font-size: 19px; margin-bottom: 7px; }
+    .category p { color: var(--muted); font-size: 14px; }
+    .category .read {
+      display: inline-block;
+      margin-top: 14px;
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .intro { background: var(--green); color: white; }
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+    .intro h2 { font-size: 32px; line-height: 1.25; margin-bottom: 17px; }
+    .intro p { color: #e1e9e2; font-size: 15px; }
+    .intro-image {
+      min-height: 280px;
+      border-radius: 10px;
+      background: url("https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=1000&q=85") center/cover;
+    }
+    .tips {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .tip {
+      background: white;
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .tip .number { color: var(--gold); font-size: 13px; font-weight: 800; }
+    .tip h3 { color: var(--green); font-size: 18px; margin: 9px 0; }
+    .tip p { color: var(--muted); font-size: 14px; }
+    .disclosure {
+      background: #eeece4;
+      padding: 22px;
+      border-radius: 7px;
+      color: #59645d;
+      font-size: 13px;
+      margin-top: 30px;
+    }
+    footer {
+      background: #203b2e;
+      color: white;
+      padding: 42px 0 25px;
+    }
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+      padding-bottom: 25px;
+    }
+    footer .logo { color: white; }
+    footer p { color: #d1ddd4; font-size: 13px; max-width: 390px; margin-top: 10px; }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+    .footer-links a { font-size: 13px; color: #e4ebe5; }
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.18);
+      padding-top: 20px;
+      color: #d1ddd4;
+      font-size: 12px;
+      text-align: center;
+    }
+    @media(max-width: 760px) {
+      .nav { flex-direction: column; padding: 15px 0; gap: 10px; }
+      nav { gap: 17px; flex-wrap: wrap; justify-content: center; }
+      nav a { font-size: 12px; }
+      .hero { padding: 55px 0; }
+      .hero-grid, .intro-grid { grid-template-columns: 1fr; gap: 28px; }
+      .hero-image { min-height: 260px; }
+      section { padding: 55px 0; }
+      .categories, .tips { grid-template-columns: 1fr; }
+      .section-heading h2 { font-size: 27px; }
+      .intro-image { min-height: 230px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#">Galley<span>Ease</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#categories">Storage Ideas</a>
+      <a href="#tips">Kitchen Tips</a>
+      <a href="#about">About Us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">A Better Organized Kitchen</div>
+        <h1>Smart Storage.<br>Simpler Kitchens.</h1>
+        <p>
+          Make the most of every inch. Discover practical kitchen storage
+          ideas and renter-friendly solutions designed for small homes
+          and apartments.
+        </p>
+        <a class="button" href="#categories">Explore Storage Ideas</a>
+      </div>
+      <div class="hero-image" role="img" aria-label="Modern organized kitchen"></div>
+    </div>
+  </section>
+
+  <section id="categories">
+    <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">Find Your Solution</div>
+        <h2>Explore Kitchen Storage Ideas</h2>
+        <p>Simple ways to create more space and keep your kitchen organized.</p>
+      </div>
+
+      <div class="categories">
+        <article class="category">
+          <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Organized kitchen cabinets" loading="lazy">
+          <div class="category-content">
+            <h3>Under-Sink Organizers</h3>
+            <p>Make awkward cabinet space useful with smart storage solutions.</p>
+            <a class="read" href="#tips">Explore Ideas →</a>
+          </div>
+        </article>
+
+        <article class="category">
+          <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=800&q=80" alt="Kitchen shelves and storage" loading="lazy">
+          <div class="category-content">
+            <h3>Cabinet Organizers</h3>
+            <p>Keep cookware, dishes and everyday essentials neatly arranged.</p>
+            <a class="read" href="#tips">Explore Ideas →</a>
+          </div>
+        </article>
+
+        <article class="category">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=800&q=80" alt="Kitchen countertop organization" loading="lazy">
+          <div class="category-content">
+            <h3>Countertop Storage</h3>
+            <p>Reduce clutter and create a cleaner, more functional workspace.</p>
+            <a class="read" href="#tips">Explore Ideas →</a>
+          </div>
+        </article>
+
+        <article class="category">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Home storage shelves" loading="lazy">
+          <div class="category-content">
+            <h3>Pantry Organization</h3>
+            <p>Make pantry shelves easier to use with bins and clear containers.</p>
+            <a class="read" href="#tips">Explore Ideas →</a>
+          </div>
+        </article>
+
+        <article class="category">
+          <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80" alt="Modern home interior" loading="lazy">
+          <div class="category-content">
+            <h3>Small Kitchen Ideas</h3>
+            <p>Find clever ways to use narrow spaces and unused corners.</p>
+            <a class="read" href="#tips">Explore Ideas →</a>
+          </div>
+        </article>
+
+        <article class="category">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Organized apartment interior" loading="lazy">
+          <div class="category-content">
+            <h3>Renter-Friendly Storage</h3>
+            <p>Discover practical ideas that avoid drilling and permanent changes.</p>
+            <a class="read" href="#tips">Explore Ideas →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro" id="about">
+    <div class="container intro-grid">
+      <div>
+        <div class="eyebrow">Welcome to GalleyEase</div>
+        <h2>Small Kitchen? Make Every Inch Count.</h2>
+        <p>
+          A well-organized kitchen doesn't need a big renovation or a big
+          budget. GalleyEase shares practical ideas, helpful guides and
+          carefully considered storage recommendations for everyday homes.
+          Our focus is on making small kitchens easier to use, one smart
+          storage idea at a time.
+        </p>
+      </div>
+      <div class="intro-image" role="img" aria-label="Bright and organized home kitchen"></div>
+    </div>
+  </section>
+
+  <section id="tips">
+    <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">Start With The Basics</div>
+        <h2>Simple Ways to Organize Your Kitchen</h2>
+        <p>A few practical habits can make a small kitchen feel more spacious.</p>
+      </div>
+      <div class="tips">
+        <article class="tip">
+          <div class="number">01 / DECLUTTER</div>
+          <h3>Clear Unused Items</h3>
+          <p>Remove things you rarely use to make room for the essentials you reach for every day.</p>
+        </article>
+        <article class="tip">
+          <div class="number">02 / USE VERTICAL SPACE</div>
+          <h3>Think Beyond Shelves</h3>
+          <p>Use shelf risers, hooks and stackable organizers to make better use of available space.</p>
+        </article>
+        <article class="tip">
+          <div class="number">03 / ORGANIZE BY USE</div>
+          <h3>Keep Essentials Close</h3>
+          <p>Store frequently used items within easy reach and group similar items together.</p>
+        </article>
+      </div>
+      <div class="disclosure">
+        <strong>Affiliate Disclosure:</strong> GalleyEase may participate in
+        affiliate programs. We may earn a commission when readers purchase
+        through qualifying links, at no additional cost to them. Product
+        recommendations and links will be clearly identified where applicable.
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="#">Galley<span>Ease</span></a>
+        <p>Practical, renter-friendly kitchen organization ideas for small homes and apartments.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#categories">Storage Ideas</a>
+        <a href="#tips">Kitchen Tips</a>
+        <a href="#about">About</a>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 GalleyEase. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
