@@ -209,6 +209,22 @@
       .section-heading h2 { font-size: 27px; }
       .intro-image { min-height: 230px; }
     }
+    
+.guides-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 850px) {
+  .guides-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .guides-grid {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
 </head>
 <body>
