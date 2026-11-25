@@ -35,12 +35,21 @@
       color: white;
       text-decoration: none;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 18px;
-      font-size: 14px;
-    }
+    nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0;
+  font-size: 14px;
+  white-space: nowrap;
+}
     main {
       max-width: 900px;
       margin: 50px auto;
