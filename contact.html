@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Get in touch with GalleyEase. Share your questions, suggestions, and feedback about small kitchen organization.">
+  <meta name="description" content="Contact GalleyEase with your questions, suggestions, and feedback about small kitchen organization.">
   <title>Contact Us | GalleyEase</title>
   <style>
     * { box-sizing: border-box; }
@@ -54,16 +54,52 @@
     }
     h1, h2 { color: #244b3b; }
     h1 { font-size: 36px; margin-top: 0; }
-    .contact-box {
-      background: #f1f3e9;
-      padding: 22px;
-      border-left: 4px solid #c49a45;
+    .contact-form {
+      margin-top: 25px;
+    }
+    .form-group {
+      margin-bottom: 18px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 7px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ccd4ca;
       border-radius: 6px;
-      margin: 25px 0;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      background: #fff;
+    }
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+    input:focus, textarea:focus {
+      outline: 2px solid #c49a45;
+      border-color: #c49a45;
+    }
+    button {
+      background: #244b3b;
+      color: white;
+      border: none;
+      padding: 13px 25px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover { background: #35644f; }
+    .note {
+      font-size: 14px;
+      color: #657267;
+      margin-top: 15px;
     }
     .back {
       display: inline-block;
-      margin-top: 15px;
+      margin-top: 25px;
       background: #244b3b;
       color: white;
       padding: 11px 20px;
@@ -110,29 +146,52 @@
       suggestions, and feedback from our readers.
     </p>
 
-    <h2>Get in Touch</h2>
+    <h2>Send Us a Message</h2>
     <p>
-      Have a question about kitchen organization, a suggestion for a future
-      article, or feedback about our website? We appreciate hearing from you.
+      Have a question about kitchen organization or a suggestion
+      for a future article? Please use the form below.
     </p>
 
-    <div class="contact-box">
-      <h2>We Welcome Your Feedback</h2>
-      <p>
-        You can share your thoughts and suggestions with us through our
-        website's public contact channels as they become available.
+    <form class="contact-form"
+          action="https://formspree.io/f/mgakrjdg"
+          method="POST">
+
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name"
+               placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email"
+               placeholder="Enter your email address" required>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject"
+               placeholder="Message subject" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message"
+                  placeholder="Write your message here..." required></textarea>
+      </div>
+
+      <button type="submit">Send Message</button>
+
+      <p class="note">
+        Thank you for contacting GalleyEase. We appreciate your feedback.
       </p>
-    </div>
+    </form>
 
     <h2>Our Content</h2>
     <p>
-      GalleyEase focuses on practical kitchen storage ideas, renter-friendly
-      organization solutions, and useful product recommendations for small
-      homes and apartments.
-    </p>
-
-    <p>
-      Thank you for visiting GalleyEase and being part of our community.
+      GalleyEase focuses on practical kitchen storage ideas,
+      renter-friendly organization solutions, and useful product
+      recommendations for small homes and apartments.
     </p>
 
     <a class="back" href="index.html">Back to Home</a>
